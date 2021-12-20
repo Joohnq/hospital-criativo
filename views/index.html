@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section id="intro">
+    <header>
+        <a href="/">
+            <img src="images/logo.png" alt="Logo Hospital Criativo">
+        </a>
+    </header>  
+
+    <main>
+        <p>
+            Algumas pessoas são infectadas, mas apresentam apenas sintomas muito leves. Esses sintomas geralmente são leves e começam gradualmente.
+            O Distanciamento Social é de extrema importância mesmo não estando doente, para evitar o contato com infectados.
+        </p>
+        <p>
+            Logo, com objetivo de nos ajudarmos aqui você verá sugestões para se previnir do COVID-19
+        </p>
+    </main>
+    
+
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar dicas</button>
+        <a href="/ideias" class="button">Ver dicas</a>
+    </section>
+</section>
+
+<section id="last-ideas">
+
+    {% include "all-ideas.html" %}
+
+</section>
+
+{% endblock %}

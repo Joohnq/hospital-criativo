@@ -1,0 +1,358 @@
+@charset "Utf-8";
+/*    Configurações Globais    */
+
+:root{
+    --background: #e5e5e5;
+    --green: #78C2A4;
+    --green-alfa: #78c2a4a2;
+    --green-black: #39827a;
+    --text-a: #25282b;
+    --blue: #30526a;
+    --blue-light: #53c9cc;
+}
+
+
+body{
+    background-color: var(--background);
+    color: var(--text-a);
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.hideScroll{
+    overflow: hidden;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+#container{
+    width: 90%;
+    max-width: 1070px;
+
+    margin: 40px auto;
+
+    display: flex;
+
+    overflow: hidden;
+}
+
+#intro{
+    width: 400px;
+
+    margin-right: 150px;
+}
+
+#intro header a img{
+    width: 400px;
+}
+
+main{
+    margin: 25px 0 35px;
+}
+/*----------------------------------------*/
+
+/*    Buttons    */
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    border: none;
+
+    background: none;
+    color: black;
+
+    cursor: pointer;
+
+    outline: none;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: .2px;
+}
+
+.button{
+    background: var(--blue);
+    color: #fff; 
+    
+    width: 150px;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 8px;
+    box-shadow: 10px -10px 0px var(--green-black);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.button:hover, form button:hover{
+    background-color: var(--blue-light);
+    color: white;
+
+    text-decoration: none;
+
+    transition: ease all 0.3s;    
+}
+
+button:hover, a:hover, #page-ideas header nav li a:hover{
+    text-decoration: underline;
+}
+/*----------------------------------------*/
+
+/*    Idea    */
+.idea{
+    display: flex;
+
+    margin-bottom: 32px;
+    padding: 32px;
+
+    background-color: #fff;
+    border-radius: 8px;
+
+    box-shadow:0 4px 16px -8px black;
+
+}
+
+.idea img{
+    width: 70px;
+    height: 70px;
+
+    margin-right: 32px;
+}
+.idea h3{
+    margin: 0;
+}
+
+.idea p{
+    margin: 8px 0;
+
+    color: #777;
+}
+
+.idea .description{
+    margin: 16px 0;
+}
+
+p, .description{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .1px;
+}
+
+.idea a{
+    color: rgba(0, 0, 0, 0.753);
+    font-weight: 600;
+}
+/*----------------------------------------*/
+
+/*    Modal    */
+#modal{
+    background-color: var(--green-black);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+#modal .content{
+    margin: auto auto;   
+
+    color: white;
+}
+
+#modal .content h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal form{
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto 15%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5){
+    grid-column: span 2;
+}
+
+#modal.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#modal.addScroll{
+    overflow: auto;
+}
+
+form input,
+form textarea{
+    width: 100%;
+    padding: 12px;
+
+    border-radius: 6px;
+    border: 1px solid var(--green-alfa);
+
+    font-size: 16px;
+
+    outline: none;
+
+    box-sizing: border-box;/*Somará o width com o padding ent o padding irá se comportar a depender do width*/
+}
+
+form label{
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: .8px;
+}
+
+form button,
+form .button{
+    background: white;
+    color: var(--green-black);
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-top: 32px;
+
+    grid-column: 2;/*Ele irá se localizar no inicio da segunda coluna*/
+    justify-self: end;/*Irá para o final da segunda coluna*/
+}
+
+form a{
+    background-color: black;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    align-self: end;
+}
+
+form a:hover{
+    background-color: #ffffff;
+    color: var(--green);
+
+    text-decoration: none;
+
+    transition: ease all 0.3s;
+}
+
+form textarea{
+    resize: none;  
+}
+/*----------------------------------------*/
+
+/*    Idea Html    */
+#page-ideas #container{
+    display: block;
+}
+
+#page-ideas header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideas header a img{
+    width: 300px;
+}
+
+#page-ideas nav{
+    display: flex;
+    align-items: center;
+}
+
+#page-ideas nav li{
+    list-style-type: none;
+
+    margin-right: 16px;
+}
+
+#page-ideas nav li a{
+    color: var(--text-a);
+
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#page-ideas nav li:last-child .button{
+    margin: 0;
+
+    color: white;
+}
+
+#page-ideas nav li:last-child a:hover{
+    background-color: var(--blue-light);
+    
+    text-decoration: none;
+}
+
+section#title{
+    text-align: center;
+
+    margin: 60px 0;
+}
+
+section#title p{
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1{
+    margin: 0;
+    font-size: 28px;
+}
+
+section#ideas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+section#ideas .idea{
+    margin: 0;
+}
+/*----------------------------------------*/
